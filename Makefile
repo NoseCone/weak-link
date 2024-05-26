@@ -1,14 +1,15 @@
-all: index.html
+all: build/index.html
 
-index.html: css
-	./css.exe /Css/main > index.html
+build/index.html: css
+	mkdir -p build && ./css.exe /Css/main > build/site.html
+	sed -e '1,/^\r\{0,1\}$$/d' build/site.html > $@
 
 css:
 	urweb css -protocol static
 
 clean:
-	rm -f index.html
+	rm -f build/index.html
 	rm -f css.exe
 
-www: index.html
-	python3 -m http.server
+www: build/index.html
+	cd build && python3 -m http.server

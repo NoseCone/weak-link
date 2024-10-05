@@ -1,0 +1,13 @@
+excluded-dirs:
+  - "build"
+
+excluded-files:
+  - ".gitignore"
+  - "*.exe"
+
+included-files:
+  - "*.ur"
+  - "*.urp"
+  - "*.urs"
+  - "*.js"
+  - "*.md"

@@ -1,4 +1,6 @@
+lessSafeFfi
 allow url http://adam.chlipala.net/style.css
 rewrite style Css/quote quote
+jsFile add.js
 
 site
